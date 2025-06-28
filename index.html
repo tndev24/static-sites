@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tĩnh của Tôi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chào mừng đến với Website Tĩnh của tôi!</h1>
+        <p>Được triển khai với AWS S3, CloudFront và WAF.</p>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>Giới thiệu</h2>
+            <p>Đây là một ví dụ đơn giản về một trang web tĩnh. Nó được thiết kế để kiểm tra quá trình triển khai tự động bằng Terraform trên AWS, sử dụng S3 để lưu trữ, CloudFront để phân phối nội dung và WAF để bảo mật.</p>
+            <p>Hãy thử kiểm tra các chức năng bảo mật sau khi triển khai!</p>
+        </section>
+
+        <section class="features">
+            <h2>Các Tính năng Chính</h2>
+            <ul>
+                <li>Lưu trữ trên Amazon S3</li>
+                <li>Phân phối nội dung toàn cầu với Amazon CloudFront</li>
+                <li>Bảo vệ bởi AWS WAF (chống SQL injection, XSS, chặn IP)</li>
+                <li>Hỗ trợ HTTPS tự động</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Liên hệ</h2>
+            <p>Để biết thêm thông tin, vui lòng liên hệ qua email: <span id="contact-email"></span></p>
+            <button id="show-email-btn">Hiện Email</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Tĩnh. Bảo lưu mọi quyền.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
