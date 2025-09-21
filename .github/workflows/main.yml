@@ -15,4 +15,4 @@ jobs:
         run: echo "Hello, world! This is a manual run."
 
       - name: Run another command # Bước 3: Chạy thêm một câu lệnh khác
-        run: ls -l # Ví dụ: liệt kê các file trong thư mục làm việc
+        run: which python
