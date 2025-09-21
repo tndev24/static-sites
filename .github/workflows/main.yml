@@ -15,7 +15,7 @@ jobs:
         run: echo "Hello, world! This is a manual run."
 
       - name: Run another command # Bước 3: Chạy thêm một câu lệnh khác
-        run: which python
+        run: python --version
       - name: Create and run a multi-line Python script
         run: |
           cat <<EOF > my_multi_line_script.py
