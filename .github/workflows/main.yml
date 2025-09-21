@@ -16,3 +16,13 @@ jobs:
 
       - name: Run another command # Bước 3: Chạy thêm một câu lệnh khác
         run: which python
+      - name: Create and run a multi-line Python script
+        run: |
+          cat <<EOF > my_multi_line_script.py
+          def greet(name):
+              print(f"Hello, {name}!")
+
+          greet("GitHub Actions")
+          EOF
+          
+          python my_multi_line_script.py
