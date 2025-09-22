@@ -1,0 +1,29 @@
+name: Test script in another 2nd branch 
+
+on:
+  push:
+    branches:
+    - staging
+jobs:
+  run-simple-commands: # Tên của job
+    runs-on: ubuntu-latest # Chọn runner, ví dụ Ubuntu mới nhất
+
+    steps:
+      - name: Checkout code # Bước 1: Lấy mã nguồn từ repository
+        uses: actions/checkout@v4
+
+      - name: Run a simple shell command # Bước 2: Chạy một câu lệnh đơn giản
+        run: echo "Hello, world! This is a manual run."
+
+      - name: Run another command # Bước 3: Chạy thêm một câu lệnh khác
+        run: python --version
+      - name: Create and run a multi-line Python script
+        run: |
+          cat <<EOF > my_multi_line_script.py
+          def greet(name):
+              print(f"Hello, {name}!")
+
+          greet("GitHub Actions")
+          EOF
+          
+          python my_multi_line_script.py
