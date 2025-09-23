@@ -13,7 +13,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run a simple shell command # Bước 2: Chạy một câu lệnh đơn giản
-        run: echo "Hello, world! This is a manual run."
+        run: |
+          echo $GITHUB_REF_NAM
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_SHA
 
       - name: Run another command # Bước 3: Chạy thêm một câu lệnh khác
         run: python --version
